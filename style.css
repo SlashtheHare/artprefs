@@ -67,7 +67,7 @@ p {
 }
 
 .tab-content {
-  min-height: 350px;   <-- tweak this to sit just below your tabs
+  min-height: 350px;
 }
 
 /* ----------------------------------------------------------

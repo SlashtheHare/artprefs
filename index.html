@@ -2,164 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Design Tastes</title>
 
   <!-- Bootstrap 5 CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"/>
+
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        rel="stylesheet"/>
+
   <!-- Your custom styles -->
-  <link rel="stylesheet" href="style.css" />
+  <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
 
   <!-- Header -->
   <div class="card border-left-0 border-right-0 rounded-0 p-3 my-3">
-    <h1 class="display-3 mb-0">
-      Looking for OCs, Offering Art & Customs
-    </h1>
+    <h1 class="display-3 mb-0">Looking for OCs, Offering Art & Customs</h1>
     <h3 class="mt-2 mb-0 text-uppercase font-weight-lighter">
       Always active, and I'm interested in OCs of basically any kind.
     </h3>
   </div>
 
-  <!-- Nav-Tabs -->
+  <!-- Tabs -->
   <div class="card my-4 p-4">
     <ul class="nav nav-tabs" id="infoTabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active"
-          id="notes-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#notes"
-          type="button"
-          role="tab"
-          aria-controls="notes"
-          aria-selected="true"
-        >
+        <button class="nav-link active"
+                id="notes-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#notes"
+                type="button"
+                role="tab"
+                aria-controls="notes"
+                aria-selected="true">
           Little Notes
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="themes-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#themes"
-          type="button"
-          role="tab"
-          aria-controls="themes"
-          aria-selected="false"
-        >
+        <button class="nav-link"
+                id="themes-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#themes"
+                type="button"
+                role="tab"
+                aria-controls="themes"
+                aria-selected="false">
           Themes/Aesthetics
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="species-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#species"
-          type="button"
-          role="tab"
-          aria-controls="species"
-          aria-selected="false"
-        >
+        <button class="nav-link"
+                id="species-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#species"
+                type="button"
+                role="tab"
+                aria-controls="species"
+                aria-selected="false">
           Species Preferences
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link"
-          id="tropes-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#tropes"
-          type="button"
-          role="tab"
-          aria-controls="tropes"
-          aria-selected="false"
-        >
+        <button class="nav-link"
+                id="tropes-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#tropes"
+                type="button"
+                role="tab"
+                aria-controls="tropes"
+                aria-selected="false">
           Character Tropes
         </button>
       </li>
       <li class="nav-item" role="presentation">
-    <button
-      class="nav-link"
-      id="content-tab"
-      data-bs-toggle="tab"
-      data-bs-target="#content"
-      type="button"
-      role="tab"
-      aria-controls="content"
-      aria-selected="false"
-    >
-      Content Preferences
-    </button>
-  </li>
-
-  <!-- Fave Artists Tab -->
-  <li class="nav-item" role="presentation">
-    <button
-      class="nav-link"
-      id="fave-artists-tab"
-      data-bs-toggle="tab"
-      data-bs-target="#fave-artists"
-      type="button"
-      role="tab"
-      aria-controls="fave-artists"
-      aria-selected="false"
-    >
-      Fave Artists
-    </button>
-  </li>
+        <button class="nav-link"
+                id="content-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#content"
+                type="button"
+                role="tab"
+                aria-controls="content"
+                aria-selected="false">
+          Content Preferences
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link"
+                id="fave-artists-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#fave-artists"
+                type="button"
+                role="tab"
+                aria-controls="fave-artists"
+                aria-selected="false">
+          Fave Artists
+        </button>
+      </li>
     </ul>
 
     <div class="tab-content mt-4" id="infoTabsContent">
-      <!-- Notes Pane -->
-      <div
-        class="tab-pane fade show active"
-        id="notes"
-        role="tabpanel"
-        aria-labelledby="notes-tab"
-      >
+
+      <!-- 1) Little Notes Pane -->
+      <div class="tab-pane fade show active"
+           id="notes"
+           role="tabpanel"
+           aria-labelledby="notes-tab">
         <p>🩸 WARNING: This website WILL reference dead dove content.</p>
         <p>🩸 I'm picky with designs but I generally LOVE getting random bs if it's based off of what I'm listing here.</p>
-        <p>🩸 I'm a HUGE fan of most dead dove subjects (see "preferences" tab), so if you're up for any on my YES, please do. I'll love you.</p>
-        <p>🩸 We can both trade surprise customs & send wips at every step to make sure the other likes it. Up to you!</p>
-        <p>🩸 I'm not really picky with art styles, but I do LOVE me horror-esque styles! (see my "fave artists" tab)</p>
-        <p>🩸 Our trade doesn't mean immediately cutting off contact afterwards - if you feel we had a good convo inbetween, let's Friend Up!</p>
-        <p>🩸 I'm also a huge fan of CBCs, gimme dat shit idgaf!</p>
+        <p>🩸 We can trade surprise customs & send WIPs at every step to make sure the other likes it.</p>
+        <p>🩸 I love horror-esque styles! (see my Fave Artists tab)</p>
         <p>🩸 Add me on Discord (GioBrauer) for faster replies!</p>
       </div>
 
-      <!-- Themes/Aesthetics Pane -->
-      <div
-        class="tab-pane fade"
-        id="themes"
-        role="tabpanel"
-        aria-labelledby="themes-tab"
-      >
+      <!-- 2) Themes/Aesthetics Pane -->
+      <div class="tab-pane fade"
+           id="themes"
+           role="tabpanel"
+           aria-labelledby="themes-tab">
         <div class="d-flex flex-wrap justify-content-center">
-
-          <!-- Core Aesthetics Card -->
+          <!-- repeat for each of your theme-card blocks -->
           <div class="theme-card card h-100">
-            <button
-              class="btn btn-block"
-              data-bs-toggle="collapse"
-              data-bs-target="#coreGroup"
-              aria-expanded="false"
-              aria-controls="coreGroup"
-            >
+            <button class="btn btn-block"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#coreGroup"
+                    aria-expanded="false"
+                    aria-controls="coreGroup">
               <i class="fa-solid fa-layer-group"></i>
               <span class="mx-1 text-danger">Core Aesthetics</span>
               <i class="fa-solid fa-layer-group"></i>
@@ -352,29 +322,24 @@
         </div>
       </div>
 
-      <!-- Species Preferences Pane -->
-      <div
-        class="tab-pane fade"
-        id="species"
-        role="tabpanel"
-        aria-labelledby="species-tab"
-      >
-        <p>🩸 Furries (Faves: Rabbits / Bunnies / Jackalopes)</p>
+      <!-- 3) Species Preferences Pane -->
+      <div class="tab-pane fade"
+           id="species"
+           role="tabpanel"
+           aria-labelledby="species-tab">
+        <p>🩸 Furries (Rabbits, Bunnies, Jackalopes)</p>
         <p>🩸 Humans</p>
-        <p>🩸 Monsters / Cryptids</p>
-        <p>🩸 Humanoids (Faves: Mermaids / Sirens / Selkies / Etc, Vampires, Werewolves)</p>
-        <p>🩸 Ferals aren't usually my taste!</p>
+        <p>🩸 Monsters & Cryptids</p>
+        <p>🩸 Humanoids (Mermaids, Sirens, Vampires, Werewolves)</p>
       </div>
 
-      <!-- Character Tropes Pane -->
-      <div
-        class="tab-pane fade"
-        id="tropes"
-        role="tabpanel"
-        aria-labelledby="tropes-tab"
-      >
-        <div style="column-count: 2; column-gap: 2rem;">
-          <p>🩸 Old men</p>
+      <!-- 4) Character Tropes Pane -->
+      <div class="tab-pane fade"
+           id="tropes"
+           role="tabpanel"
+           aria-labelledby="tropes-tab">
+        <div style="column-count:2; column-gap:2rem;">
+            <p>🩸 Old men</p>
           <p>🩸 Pathetic men</p>
           <p>🩸 Failwife of a man</p>
           <p>🩸 Serial Killers</p>
@@ -394,44 +359,39 @@
           <p>🩸 Cowboys</p>
           <p>🩸 Vampire killers</p>
         </div>
- 
       </div>
 
-              
+      <!-- 5) Content Preferences Pane -->
+      <div class="tab-pane fade"
+           id="content"
+           role="tabpanel"
+           aria-labelledby="content-tab">
+        <p>🩸 I dig dark, morally-grey stories with a horror twist.</p>
+        <p>🩸 High-contrast palettes, glitch effects, surreal distortion.</p>
+        <p>🩸 Graphic gore details and uneasy atmospheres.</p>
+      </div>
+
+      <!-- 6) Fave Artists Pane -->
+      <div class="tab-pane fade"
+           id="fave-artists"
+           role="tabpanel"
+           aria-labelledby="fave-artists-tab">
+        <ul class="list-unstyled">
+          <li>🩸 H.R. Giger</li>
+          <li>🩸 Junji Ito</li>
+          <li>🩸 Zdzisław Beksiński</li>
+          <li>🩸 Francisco Goya</li>
+        </ul>
+      </div>
+
     </div>
-      <!-- Content Preferences Pane -->
-  <div
-    class="tab-pane fade"
-    id="content"
-    role="tabpanel"
-    aria-labelledby="content-tab"
-  >
-    <p>🩸 I dig dark, morally-grey stories with a horror twist.</p>
-    <p>🩸 High-contrast palettes, glitch effects, and surreal distortion.</p>
-    <p>🩸 Graphic gore details and uneasy atmospheres really grab me.</p>
   </div>
 
-  <!-- Fave Artists Pane -->
-  <div
-    class="tab-pane fade"
-    id="fave-artists"
-    role="tabpanel"
-    aria-labelledby="fave-artists-tab"
-  >
-    <ul style="list-style: none; padding-left: 0;">
-      <li>🩸 H.R. Giger</li>
-      <li>🩸 Junji Ito</li>
-      <li>🩸 Zdzisław Beksiński</li>
-      <li>🩸 Francisco Goya</li>
-    </ul>
-  </div>
-  </div>
-</div>
   <!-- Bootstrap 5 JS Bundle (includes Popper) -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
-  <!-- Your custom collapse-locking script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your custom collapse‐locking script -->
   <script src="script.js" defer></script>
 </body>
 </html>
+

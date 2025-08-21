@@ -86,16 +86,17 @@ p {
   text-align: center;
 }
 
-.theme-card .collapse .card-body {
-  padding: 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-top: 1px solid #800000;
+/* ALWAYS keep your collapse content at 0.95rem—even while it’s animating */
+.theme-card .card-body p {
+  font-size: 0.95rem !important;
 }
 
-.theme-card .collapse .card-body p {
-  margin: 0.25rem 0;
-  font-size: 0.95rem;
+/* optional: remove any transition on font-size or height so it never reflows */
+.theme-card .card-body,
+.theme-card .card-body p {
+  transition: none !important;
 }
+
 
 /* 1) Left-align the Little Notes pane */
 #notes {

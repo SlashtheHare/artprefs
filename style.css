@@ -1,0 +1,39 @@
+body {
+  background: url('https://gifcity.carrd.co/assets/images/gallery63/4290ff0d.jpg?v=0afd6af1') repeat;
+  padding: 32px;
+  border-radius: 20px;
+}
+
+.card {
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #800000;
+}
+
+.display-4, .display-3 {
+  color: #e53935;
+}
+
+h3 {
+  color: #fd9797;
+}
+
+p {
+  color: #fd9797;
+  font-size: 22px;
+  text-align: center;
+}
+
+.warning-banner {
+  background: repeating-linear-gradient(45deg, #800000, #800000 10px, #000 10px, #000 20px);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  border: 2px solid #e53935;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #ffd6d6;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #000;
+}

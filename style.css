@@ -64,6 +64,7 @@ p {
   color: #fd9797;
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
+  min-height: 350px;
 }
 
 /* ----------------------------------------------------------
@@ -101,13 +102,3 @@ p {
   text-align: left;
 }
 
-/* 2) Kill any font-size flicker on collapse open/close */
-.theme-card .collapse .card-body,
-.theme-card .collapse .card-body p {
-  transition: none;
-}
-
-/* 3) Reserve vertical space so cards don’t jump when you open/close */
-.theme-card .collapse .card-body {
-  min-height: 180px;  /* tweak this value up/down to suit your longest list */
-}

@@ -118,7 +118,7 @@ p {
 .card.my-4.p-4 {
   display: flex;
   flex-direction: column;
-  height: 700px;     /* ← adjust to your desired total height */
+  height: 650px;     /* ← adjust to your desired total height */
 }
 
 .card.my-4.p-4 .nav-tabs {

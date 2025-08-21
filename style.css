@@ -161,3 +161,16 @@ p {
   margin-bottom: 0.8rem;
 }
 
+
+/* --------------------------------------------------
+  Accordion tabs
+   -------------------------------------------------- */
+
+.accordion-button img {
+  width: 1.25rem;        /* uniform icon width */
+  height: 1.25rem;       /* uniform icon height */
+  pointer-events: none;  /* so clicks go to the button */
+}
+.accordion-button .me-2 {
+  margin-right: 0.5rem !important;
+}

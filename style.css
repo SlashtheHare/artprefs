@@ -40,7 +40,7 @@ p {
 
 /* Make each theme-card auto-size, then JS will lock them all equal */
 .theme-card {
-  width: 280px;      /* reset any max-content hack */
+  max-width: 280px;      /* reset any max-content hack */
   margin: 0.5rem;   /* space between cards */
 }
 

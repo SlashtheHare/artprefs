@@ -174,3 +174,46 @@ p {
 .accordion-button .me-2 {
   margin-right: 0.5rem !important;
 }
+
+/* 1. Make the whole thing more compact */
+.theme-accordion .accordion-button {
+  font-size: .875rem;             /* smaller text */
+  padding: .4rem .75rem;          /* less vertical/horizontal padding */
+}
+
+.theme-accordion .accordion-body {
+  padding: .5rem .75rem;          /* tighter content area */
+}
+
+/* 2. Remove default borders & match themes tab look */
+.theme-accordion .accordion-item {
+  border: none;                   /* no outer card border */
+  border-bottom: 1px solid #e2e2e2; /* subtle separator like your themes list */
+}
+
+.theme-accordion .accordion-button {
+  background: transparent;        /* inherit page/background color */
+  box-shadow: none;               /* no default inner shadow */
+  color: #555;                    /* muted text */
+}
+
+.theme-accordion .accordion-button:not(.collapsed) {
+  background-color: #f8f9fa;      /* light highlight on open */
+  color: #333;                    /* darker text when active */
+}
+
+/* 3. Shrink the default chevron icon */
+.theme-accordion .accordion-button::after {
+  font-size: .75rem;              /* smaller arrow */
+  width: .75rem;                  /* tighten click area */
+  height: .75rem;
+}
+
+/* 4. Tame your custom images to match */
+.theme-accordion .accordion-button img {
+  width: 1rem;                    /* small uniform icon size */
+  height: 1rem;
+  margin-right: .5rem;            /* spacing before label */
+  pointer-events: none;           /* don’t block the click */
+}
+

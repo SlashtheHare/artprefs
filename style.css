@@ -248,7 +248,7 @@ p {
 #content .theme-card {
   flex: 0 0 auto;          /* prevent shrinking/growing */
   min-width: 240px;        /* adjust to taste */
-  max-width: 480px;        /* keeps them roughly equal */
+  max-width: 500px;        /* keeps them roughly equal */
   margin: 0.5rem;          /* spacing between cards */
 }
 
@@ -277,4 +277,22 @@ p {
   margin-bottom: 0.5rem;
 }
 
+/* 1) Change the font size of the card “titles” (the buttons) */
+#content .theme-card .btn {
+  font-size: 20px;      /* ← adjust up/down */
+  padding: 0.5rem;      /* you can tweak padding here too */
+}
+
+/* 2) Change the font size of everything inside the card-body */
+#content .theme-card .card-body {
+  font-size: 20px;    /* ← adjust this for all paragraphs & list items */
+  line-height: 1.4;     /* optional: tweak line-height for readability */
+}
+
+/* 3) If you have <p> or <ul>/<li> in there and want to be extra sure: */
+#content .theme-card .card-body p,
+#content .theme-card .card-body ul,
+#content .theme-card .card-body li {
+  font-size: 0.9rem;    /* same as above; use !important if another rule is winning */
+}
 

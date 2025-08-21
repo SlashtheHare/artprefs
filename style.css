@@ -105,46 +105,48 @@ p {
 }
 
 
-/* 1) Left-align the Little Notes pane */
+/* --------------------------------------------------
+   1) Little Notes left-aligned
+   -------------------------------------------------- */
 #notes {
   text-align: left;
-  max-height: 300px;
 }
-#notes p {
 
-   /* ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-   1) Cap the overall tabs card height & let the notes pane scroll
-   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* --------------------------------------------------
+   2) Cap the Tabs card height & make content scroll
+   -------------------------------------------------- */
 .card.my-4.p-4 {
   display: flex;
   flex-direction: column;
-  height: 500px;          /* tweak this to the total card you want */
-}
-.card.my-4.p-4 .nav-tabs {
-  flex: 0 0 auto;         /* nav stays its height */
-}
-.card.my-4.p-4 .tab-content {
-  flex: 1 1 auto;         /* content fills the rest */
-  overflow-y: auto;       /* scroll if it’s taller than remaining space */
-  min-height: 0;          /* allows flex to shrink properly */
+  height: 400px;     /* ← adjust to your desired total height */
 }
 
-/* ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-   2) Style list items in “Fave Artists” (and any other UL/OL in tabs)
-   –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card.my-4.p-4 .nav-tabs {
+  flex: 0 0 auto;    /* nav stays its natural height */
+}
+
+.card.my-4.p-4 .tab-content {
+  flex: 1 1 auto;    /* fill remaining space */
+  min-height: 0;     /* allow flexbox to shrink */
+  overflow-y: auto;  /* scroll if content is too tall */
+}
+
+/* --------------------------------------------------
+   3) Style “Fave Artists” and any other list in tabs
+   -------------------------------------------------- */
 .tab-content ul,
 .tab-content ol {
-  padding-left: 0;        /* remove default indent */
+  padding-left: 0;
   margin: 0;
 }
+
 .tab-content li {
   list-style: none;
-  color: #fd9797;         /* match your <p> color */
-  font-size: 22px;        /* same as your <p> */
-  text-align: center;     /* center‐align like your paragraphs */
-  margin-bottom: 0.8rem;  /* same spacing as your <p> */
+  color: #fd9797;         /* same pink as your <p> */
+  font-size: 22px;        /* match your paragraph size */
+  text-align: center;     /* center like your other tab text */
+  margin-bottom: 0.8rem;  /* same spacing as <p> */
 }
-
   text-align: left;
 }
 

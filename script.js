@@ -1,21 +1,34 @@
-// Grab all collapse panels and their buttons
-const collapseEls = document.querySelectorAll('.theme-card .collapse');
-const btns        = document.querySelectorAll('.theme-card .btn');
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+  // 1) Build a Collapse instance map by panel ID
+  const collapseEls = document.querySelectorAll('.theme-card .collapse');
+  const instances   = {};
+  
+  collapseEls.forEach(el => {
+    // el.id must match data-bs-target="#<id>"
+    instances[el.id] = new bootstrap.Collapse(el, { toggle: false });
+  });
 
-btns.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
-    const panel = collapseEls[idx];
-    const isOpen = panel.classList.contains('show');
+  // 2) Wire up each button
+  document.querySelectorAll('.theme-card .btn').forEach(btn => {
+    // remove leading '#' from data-bs-target
+    const targetID = btn.dataset.bsTarget.substring(1);
+    const coll     = instances[targetID];
+    const panel    = document.getElementById(targetID);
 
-    // 1) Close all panels & deactivate all buttons
-    collapseEls.forEach(el => el.classList.remove('show'));
-    btns       .forEach(b  => b.classList.remove('active'));
+    btn.addEventListener('click', () => {
+      const isOpen = panel.classList.contains('show');
 
-    // 2) If the clicked one was NOT already open, re-open it
-    if (!isOpen) {
-      panel.classList.add('show');
-      btn.classList.add('active');
-    }
-    // otherwise we’ve effectively “toggled off” that panel
+      // 3) Close everything, deactivate all buttons
+      Object.values(instances).forEach(inst => inst.hide());
+      document.querySelectorAll('.theme-card .btn.active')
+              .forEach(b => b.classList.remove('active'));
+
+      // 4) If it wasn’t open, open it & activate the button
+      if (!isOpen) {
+        coll.show();
+        btn.classList.add('active');
+      }
+    });
   });
 });

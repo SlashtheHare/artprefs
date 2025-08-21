@@ -248,7 +248,7 @@ p {
 #content .theme-card {
   flex: 0 0 auto;          /* prevent shrinking/growing */
   min-width: 240px;        /* adjust to taste */
-  max-width: 280px;        /* keeps them roughly equal */
+  max-width: 480px;        /* keeps them roughly equal */
   margin: 0.5rem;          /* spacing between cards */
 }
 

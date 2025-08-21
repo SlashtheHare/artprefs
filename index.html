@@ -386,44 +386,7 @@
     </div>
   </div>
 
-  <!-- Bootstrap JS & dynamic width script -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  $(function(){
-    // we'll measure invisible clones of every header-btn & <p> text
-    let maxW = 0;
 
-    // helper to clone, measure, then destroy
-    function measure(sel){
-      $(sel).each(function(){
-        const clone = $(this)
-          .clone()
-          .css({
-            position: 'absolute',
-            visibility: 'hidden',
-            display: 'block',
-          })
-          .appendTo('body');
-
-        maxW = Math.max(maxW, clone.outerWidth());
-        clone.remove();
-      });
-    }
-
-    // measure all header buttons
-    measure('.theme-card button');
-
-    // measure every bullet's widest line
-    measure('.theme-card .card-body p');
-
-    // give a little breathing room
-    maxW += 32;
-
-    // enforce same width on every card
-    $('.theme-card').css('width', maxW + 'px');
-  });
-</script>
 
 </body>
 </html>

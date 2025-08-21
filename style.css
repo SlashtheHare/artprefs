@@ -281,7 +281,7 @@ p {
 #content .theme-card .btn {
   font-size: 20px;      /* ← adjust up/down */
   padding: 0.5rem;      /* you can tweak padding here too */
-   font-color: rgb(199,47,62);
+  color: rgb(199,47,62) !important;
 }
 
 /* 2) Change the font size of everything inside the card-body */

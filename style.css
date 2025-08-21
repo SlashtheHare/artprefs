@@ -217,3 +217,64 @@ p {
   pointer-events: none;           /* don’t block the click */
 }
 
+/* ----------------------------------------------------------
+   Recolors
+   ---------------------------------------------------------- */
+
+:root {
+  /* tweak this to match your exact pink */
+  --theme-pink: #e91e63;
+}
+
+/* nav-link text */
+.nav-tabs .nav-link {
+  color: var(--theme-pink) !important;
+}
+
+/* active tab underline/border */
+.nav-tabs .nav-link.active {
+  color: var(--theme-pink) !important;
+  border-color: var(--theme-pink) var(--theme-pink) transparent !important;
+}
+
+/* all paragraphs & list items inside tabs */
+.tab-content p,
+.tab-content li {
+  color: var(--theme-pink);
+}
+
+
+/* 1) Wider cards only in Content Preferences */
+#content .theme-card {
+  flex: 0 0 auto;          /* prevent shrinking/growing */
+  min-width: 240px;        /* adjust to taste */
+  max-width: 280px;        /* keeps them roughly equal */
+  margin: 0.5rem;          /* spacing between cards */
+}
+
+/* 2) Smaller “tab” button text inside those cards */
+#content .theme-card .btn {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+}
+
+/* 3) Three-column layout for each card-body */
+#content .theme-card .card-body {
+  column-count: 3;
+  column-gap: 1rem;
+  column-fill: balance;    /* evens out column lengths */
+}
+
+/* Optional: if you want your list-items to flow nicely */
+#content .theme-card .card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#content .theme-card .card-body li {
+  break-inside: avoid;     /* prevents items from splitting across columns */
+  margin-bottom: 0.5rem;
+}
+
+

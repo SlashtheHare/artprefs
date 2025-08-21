@@ -108,6 +108,7 @@ p {
 /* 1) Left-align the Little Notes pane */
 #notes {
   text-align: left;
+  max-height: 300px;
 }
 #notes p {
   text-align: left;

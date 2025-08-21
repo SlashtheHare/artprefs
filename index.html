@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design Tastes</title>
-  <!-- Bootstrap CSS -->
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
   />
+  <title>Design Tastes</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
@@ -17,8 +22,7 @@
 
   <style>
     body {
-      background: url('https://gifcity.carrd.co/assets/images/gallery63/4290ff0d.jpg?v=0afd6af1')
-        repeat;
+      background: url('https://gifcity.carrd.co/assets/images/gallery63/4290ff0d.jpg?v=0afd6af1') repeat;
       padding: 32px;
       border-radius: 20px;
     }
@@ -58,7 +62,6 @@
       margin-bottom: 0.8rem;
     }
 
-    /* make each theme-card shrink to its content, then later JS will fix them all to the same width */
     .theme-card {
       width: max-content;
       margin: 0 0.5rem 1rem;
@@ -82,7 +85,6 @@
     }
   </style>
 </head>
-
 <body>
 
   <!-- Header -->
@@ -93,83 +95,120 @@
     </h3>
   </div>
 
-  <!-- Tabs -->
+  <!-- Nav-Tabs -->
   <div class="card my-4 p-4">
-    <ul class="nav nav-tabs" id="infoTabs" role="tablist">
-      <li class="nav-item">
-        <a
+    <ul
+      class="nav nav-tabs"
+      id="infoTabs"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <button
           class="nav-link active"
           id="notes-tab"
-          data-toggle="tab"
-          href="#notes"
+          data-bs-toggle="tab"
+          data-bs-target="#notes"
+          type="button"
           role="tab"
-          >Little Notes</a
+          aria-controls="notes"
+          aria-selected="true"
         >
+          Little Notes
+        </button>
       </li>
-      <li class="nav-item">
-        <a
+      <li class="nav-item" role="presentation">
+        <button
           class="nav-link"
           id="themes-tab"
-          data-toggle="tab"
-          href="#themes"
+          data-bs-toggle="tab"
+          data-bs-target="#themes"
+          type="button"
           role="tab"
-          >Themes/Aesthetics</a
+          aria-controls="themes"
+          aria-selected="false"
         >
+          Themes/Aesthetics
+        </button>
       </li>
-      <li class="nav-item">
-        <a
+      <li class="nav-item" role="presentation">
+        <button
           class="nav-link"
           id="species-tab"
-          data-toggle="tab"
-          href="#species"
+          data-bs-toggle="tab"
+          data-bs-target="#species"
+          type="button"
           role="tab"
-          >Species Preferences</a
+          aria-controls="species"
+          aria-selected="false"
         >
+          Species Preferences
+        </button>
       </li>
-      <li class="nav-item">
-        <a
+      <li class="nav-item" role="presentation">
+        <button
           class="nav-link"
           id="tropes-tab"
-          data-toggle="tab"
-          href="#tropes"
+          data-bs-toggle="tab"
+          data-bs-target="#tropes"
+          type="button"
           role="tab"
-          >Character Tropes</a
+          aria-controls="tropes"
+          aria-selected="false"
         >
+          Character Tropes
+        </button>
       </li>
     </ul>
 
     <div class="tab-content mt-4" id="infoTabsContent">
-
-      <!-- Little Notes -->
-      <div class="tab-pane fade show active" id="notes" role="tabpanel">
+      <!-- Notes Pane -->
+      <div
+        class="tab-pane fade show active"
+        id="notes"
+        role="tabpanel"
+        aria-labelledby="notes-tab"
+      >
         <p>🩸 I'm picky with designs but I'll reply to everyone!</p>
-        <p>
-          🩸 Generally I prefer higher quality designs, but I'm not opposed to
-          lower quality ones if I like them enough ^_^
-        </p>
-        <p>
-          🩸 I'll offer what I feel is fair & matches your character's value —
-          just let me know if you prefer customs or art :3
-        </p>
-        <p>
-          🩸 I rarely offer painted/fullcolors as they are taxing
-          physically/mentally, so keep that in mind!
-        </p>
-        <p>🩸 My tastes err toward bloody subjects — just a heads-up if that’s not your thing.</p>
-        <p>🩸 Feel free to DM me here or on Discord, and comment on this Bulletin or Forum!</p>
+        <p>🩸 Generally I prefer higher quality designs…</p>
+        <p>🩸 I'll offer what I feel is fair & matches your character's value…</p>
+        <p>🩸 I rarely offer painted/fullcolors as they are taxing…</p>
+        <p>🩸 My tastes err toward bloody subjects…</p>
+        <p>🩸 Feel free to DM me here or on Discord…</p>
         <p>🩸 Add me on Discord (GioBrauer) for faster replies!</p>
       </div>
 
-      <!-- Themes/Aesthetics -->
-      <div class="tab-pane fade" id="themes" role="tabpanel">
+      <!-- Themes/Aesthetics Pane -->
+      <div
+        class="tab-pane fade"
+        id="themes"
+        role="tabpanel"
+        aria-labelledby="themes-tab"
+      >
         <div class="d-flex flex-wrap justify-content-center">
 
-          <!-- repeat this .theme-card block for each category -->
+          <!-- Sample theme-card -->
           <div class="theme-card card h-100">
             <button
               class="btn btn-block text-center"
-              data-toggle="collapse"
-              data-target="#coreGroup"
+              data-bs-toggle="collapse"
+              data-bs-target="#coreGroup"
+              aria-expanded="false"
+              aria-controls="coreGroup"
+            >
+               <!-- Themes/Aesthetics Pane -->
+      <div
+        class="tab-pane fade"
+        id="themes"
+        role="tabpanel"
+        aria-labelledby="themes-tab"
+      >
+         <div class="theme-card card h-100">
+            <button
+              class="btn btn-block text-center"
+              data-bs-toggle="collapse"
+              data-bs-target="#coreGroup"
+              aria-expanded="false"
+              aria-controls="coreGroup"
             >
               <i class="fa-solid fa-layer-group"></i>
               <span class="mx-1 text-danger">Core Aesthetics</span>
@@ -194,17 +233,20 @@
             </div>
           </div>
 
-          <div class="theme-card card h-100">
-            <button
-              class="btn btn-block text-center"
-              data-toggle="collapse"
-              data-target="#horrorGroup"
-            >
-              <i class="fa-solid fa-mask"></i>
-              <span class="mx-1 text-danger">Horror Themes</span>
-              <i class="fa-solid fa-mask"></i>
-            </button>
-            <div class="collapse" id="horrorGroup">
+         <div class="theme-card card h-100">
+  <button
+    class="btn btn-block text-center"
+    data-bs-toggle="collapse"
+    data-bs-target="#horrorGroup"
+    aria-expanded="false"
+    aria-controls="horrorGroup"
+  >
+    <i class="fa-solid fa-mask"></i>
+    <span class="mx-1 text-danger">Horror Themes</span>
+    <i class="fa-solid fa-mask"></i>
+  </button>
+  <div class="collapse" id="horrorGroup">
+    
               <div class="card-body">
                 <p>🩸 Gore</p>
                 <p>🩸 Horror</p>
@@ -220,18 +262,20 @@
             </div>
           </div>
 
-          <div class="theme-card card h-100">
-            <button
-              class="btn btn-block text-center"
-              data-toggle="collapse"
-              data-target="#fashionGroup"
-            >
-              <i class="fa-solid fa-shirt"></i>
-              <span class="mx-1 text-danger">Fashion & Style</span>
-              <i class="fa-solid fa-shirt"></i>
-            </button>
-            <div class="collapse" id="fashionGroup">
-              <div class="card-body">
+         <div class="theme-card card h-100">
+  <button
+    class="btn btn-block text-center"
+    data-bs-toggle="collapse"
+    data-bs-target="#fashionGroup"
+    aria-expanded="false"
+    aria-controls="fashionGroup"
+  >
+    <i class="fa-solid fa-shirt"></i>
+    <span class="mx-1 text-danger">Fashion & Style</span>
+    <i class="fa-solid fa-shirt"></i>
+  </button>
+  <div class="collapse" id="fashionGroup">
+    <div class="card-body">
                 <p>🩸 Gyaru (any kind!)</p>
                 <p>🩸 Harajuku Fashion</p>
                 <p>🩸 Visual Kei</p>
@@ -245,18 +289,20 @@
             </div>
           </div>
 
-          <div class="theme-card card h-100">
-            <button
-              class="btn btn-block text-center"
-              data-toggle="collapse"
-              data-target="#techGroup"
-            >
-              <i class="fa-solid fa-computer"></i>
-              <span class="mx-1 text-danger">Tech & Retro</span>
-              <i class="fa-solid fa-computer"></i>
-            </button>
-            <div class="collapse" id="techGroup">
-              <div class="card-body">
+        <div class="theme-card card h-100">
+  <button
+    class="btn btn-block text-center"
+    data-bs-toggle="collapse"
+    data-bs-target="#techGroup"
+    aria-expanded="false"
+    aria-controls="techGroup"
+  >
+    <i class="fa-solid fa-computer"></i>
+    <span class="mx-1 text-danger">Tech & Retro</span>
+    <i class="fa-solid fa-computer"></i>
+  </button>
+  <div class="collapse" id="techGroup">
+    <div class="card-body">
                 <p>🩸 Frutiger Aero</p>
                 <p>🩸 Chromecore / Y2K Chromecore</p>
                 <p>🩸 Y2K Futurism</p>
@@ -273,18 +319,20 @@
             </div>
           </div>
 
-          <div class="theme-card card h-100">
-            <button
-              class="btn btn-block text-center"
-              data-toggle="collapse"
-              data-target="#artGroup"
-            >
-              <i class="fa-solid fa-palette"></i>
-              <span class="mx-1 text-danger">Uncanny & Unsettling</span>
-              <i class="fa-solid fa-palette"></i>
-            </button>
-            <div class="collapse" id="artGroup">
-              <div class="card-body">
+        <div class="theme-card card h-100">
+  <button
+    class="btn btn-block text-center"
+    data-bs-toggle="collapse"
+    data-bs-target="#artGroup"
+    aria-expanded="false"
+    aria-controls="artGroup"
+  >
+    <i class="fa-solid fa-palette"></i>
+    <span class="mx-1 text-danger">Uncanny & Unsettling</span>
+    <i class="fa-solid fa-palette"></i>
+  </button>
+  <div class="collapse" id="artGroup">
+    <div class="card-body">
                 <p>🩸 Surrealism</p>
                 <p>🩸 Ukiyo-e</p>
                 <p>🩸 Hauntology</p>
@@ -300,18 +348,20 @@
             </div>
           </div>
 
-          <div class="theme-card card h-100">
-            <button
-              class="btn btn-block text-center"
-              data-toggle="collapse"
-              data-target="#mythGroup"
-            >
-              <i class="fa-solid fa-dragon"></i>
-              <span class="mx-1 text-danger">Creatures & Myth</span>
-              <i class="fa-solid fa-dragon"></i>
-            </button>
-            <div class="collapse" id="mythGroup">
-              <div class="card-body">
+         <div class="theme-card card h-100">
+  <button
+    class="btn btn-block text-center"
+    data-bs-toggle="collapse"
+    data-bs-target="#mythGroup"
+    aria-expanded="false"
+    aria-controls="mythGroup"
+  >
+    <i class="fa-solid fa-dragon"></i>
+    <span class="mx-1 text-danger">Creatures & Myth</span>
+    <i class="fa-solid fa-dragon"></i>
+  </button>
+  <div class="collapse" id="mythGroup">
+    <div class="card-body">
                 <p>🩸 Vampires</p>
                 <p>🩸 Werewolves</p>
                 <p>🩸 Cryptids</p>
@@ -321,18 +371,20 @@
             </div>
           </div>
 
-          <div class="theme-card card h-100">
-            <button
-              class="btn btn-block text-center"
-              data-toggle="collapse"
-              data-target="#magicalGroup"
-            >
-              <i class="fa-solid fa-wand-sparkles"></i>
-              <span class="mx-1 text-danger">Magical & Kawaii Horror</span>
-              <i class="fa-solid fa-wand-sparkles"></i>
-            </button>
-            <div class="collapse" id="magicalGroup">
-              <div class="card-body">
+       <div class="theme-card card h-100">
+  <button
+    class="btn btn-block text-center"
+    data-bs-toggle="collapse"
+    data-bs-target="#magicalGroup"
+    aria-expanded="false"
+    aria-controls="magicalGroup"
+  >
+    <i class="fa-solid fa-wand-sparkles"></i>
+    <span class="mx-1 text-danger">Girl Stuff</span>
+    <i class="fa-solid fa-wand-sparkles"></i>
+  </button>
+  <div class="collapse" id="magicalGroup">
+    <div class="card-body">
                 <p>🩸 Mahou Shoujo / Magical Girls</p>
                 <p>🩸 Mix of Kawaii & Horror</p>
                 <p>🩸 Madoka Magica</p>
@@ -348,7 +400,11 @@
       </div>
 
       <!-- Species Preferences -->
-      <div class="tab-pane fade" id="species" role="tabpanel">
+        <div
+        class="tab-pane fade"
+        id="species"
+        role="tabpanel"
+        aria-labelledby="species-tab">
         <p>🩸 Furries (Faves: Rabbits / Bunnies / Jackalopes)</p>
         <p>🩸 Humans</p>
         <p>🩸 Monsters / Cryptids</p>
@@ -360,7 +416,12 @@
       </div>
 
       <!-- Character Tropes -->
-      <div class="tab-pane fade" id="tropes" role="tabpanel">
+     <div
+        class="tab-pane fade"
+        id="tropes"
+        role="tabpanel"
+        aria-labelledby="tropes-tab"
+      >
         <div style="column-count: 2; column-gap: 2rem;">
           <p>🩸 Old men</p>
           <p>🩸 Pathetic men</p>
@@ -386,7 +447,10 @@
     </div>
   </div>
 
-
+  <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
 
 </body>
 </html>

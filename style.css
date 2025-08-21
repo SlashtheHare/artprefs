@@ -67,7 +67,7 @@ p {
 }
 
 .tab-content {
-  min-height: 550px;
+  min-height: auto !important;
 }
 
 /* ----------------------------------------------------------
@@ -95,6 +95,13 @@ p {
 .theme-card .card-body,
 .theme-card .card-body p {
   transition: none !important;
+}
+
+.theme-card .collapse,
+.theme-card .collapsing {
+  display: block !important;
+  height: auto    !important;
+  overflow: visible !important;
 }
 
 

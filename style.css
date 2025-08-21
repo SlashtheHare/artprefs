@@ -1,3 +1,6 @@
+/* ----------------------------------------------------------
+   Base & Utilities
+   ---------------------------------------------------------- */
 body {
   background: url('https://gifcity.carrd.co/assets/images/gallery63/4290ff0d.jpg?v=0afd6af1') repeat;
   padding: 32px;
@@ -10,7 +13,8 @@ body {
   border: 2px solid #800000;
 }
 
-.display-4, .display-3 {
+.display-3,
+.display-4 {
   color: #e53935;
 }
 
@@ -24,6 +28,9 @@ p {
   text-align: center;
 }
 
+/* ----------------------------------------------------------
+   Warning Banner
+   ---------------------------------------------------------- */
 .warning-banner {
   background: repeating-linear-gradient(45deg, #800000, #800000 10px, #000 10px, #000 20px);
   padding: 1.2rem;
@@ -38,19 +45,50 @@ p {
   text-shadow: 1px 1px 2px #000;
 }
 
-/* Make each theme-card auto-size, then JS will lock them all equal */
+/* ----------------------------------------------------------
+   Bootstrap-Tab Overrides
+   ---------------------------------------------------------- */
+.nav-tabs .nav-link {
+  color: #fd9797;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #800000;
+  color: #fff;
+  border-color: #800000 #800000 #000;
+}
+
+.tab-content p {
+  color: #fd9797;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ----------------------------------------------------------
+   Theme-Card Styles
+   ---------------------------------------------------------- */
 .theme-card {
-  max-width: 280px;      /* reset any max-content hack */
-  margin: 0.5rem;   /* space between cards */
+  max-width: 280px;      /* each card caps at 280px */
+  margin: 0.5rem;        /* gutter between cards */
 }
 
-/* Prevent header text from wrapping */
 .theme-card .btn {
-  white-space: nowrap;
-}
-
-/* (optional) Tweak collapse body padding/font */
-.theme-card .card-body {
+  font-size: 1rem;
   padding: 0.5rem 1rem;
+  white-space: nowrap;   /* no line wraps in the button */
+  width: 100%;
+  text-align: center;
 }
 
+.theme-card .collapse .card-body {
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid #800000;
+}
+
+.theme-card .collapse .card-body p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}

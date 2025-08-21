@@ -1,4 +1,4 @@
-n<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -24,9 +24,6 @@ n<!DOCTYPE html>
       font-variant: small-caps;
       letter-spacing: 0.09rem;
     }
-    .display-4 {
-      color: #e53935;
-    }
     h3 {
       color: #c62828;
       letter-spacing: 0.09rem;
@@ -46,6 +43,28 @@ n<!DOCTYPE html>
       font-size: 1.1rem;
       margin-bottom: 0.8rem;
     }
+
+    /* Themes grid tweaks */
+    #themes .row {
+      justify-content: center;
+    }
+    .theme-card {
+      width: auto;              /* shrink to content width */
+      min-width: 180px;         /* ensure clickable area */
+    }
+    .theme-card .btn {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    .theme-card .card-body {
+      padding: 0.5rem 1rem;
+      background-color: rgba(0,0,0,0.4);
+      border-top: 1px solid #800000;
+    }
+    .theme-card .card-body p {
+      margin: 0.25rem 0;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
@@ -53,26 +72,36 @@ n<!DOCTYPE html>
   <!-- Header -->
   <div class="card border-left-0 border-right-0 rounded-0 p-3 my-3">
     <h1 class="display-3 mb-0">Looking for OCs, Offering Art & Customs</h1>
-    <h3 class="mt-2 mb-0 text-uppercase font-weight-lighter">Always active, and I'm interested in OCs of basically any kind.</h3>
+    <h3 class="mt-2 mb-0 text-uppercase font-weight-lighter">
+      Always active, and I'm interested in OCs of basically any kind.
+    </h3>
   </div>
 
   <!-- Tabs -->
   <div class="card my-4 p-4">
     <ul class="nav nav-tabs" id="infoTabs" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="notes-tab" data-toggle="tab" href="#notes" role="tab">Little Notes</a>
+        <a class="nav-link active" id="notes-tab" data-toggle="tab" href="#notes" role="tab">
+          Little Notes
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="themes-tab" data-toggle="tab" href="#themes" role="tab">Themes/Aesthetics</a>
+        <a class="nav-link" id="themes-tab" data-toggle="tab" href="#themes" role="tab">
+          Themes/Aesthetics
+        </a>
       </li>
-        <li class="nav-item">
-      <a class="nav-link" id="species-tab" data-toggle="tab" href="#species" role="tab">Species Preferences</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="tropes-tab" data-toggle="tab" href="#tropes" role="tab">Character Tropes</a>
-    </li>
-  </ul>
+      <li class="nav-item">
+        <a class="nav-link" id="species-tab" data-toggle="tab" href="#species" role="tab">
+          Species Preferences
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tropes-tab" data-toggle="tab" href="#tropes" role="tab">
+          Character Tropes
+        </a>
+      </li>
     </ul>
+
     <div class="tab-content mt-4" id="infoTabsContent">
       <!-- Little Notes -->
       <div class="tab-pane fade show active" id="notes" role="tabpanel">
@@ -87,202 +116,226 @@ n<!DOCTYPE html>
 
       <!-- Themes/Aesthetics -->
       <div class="tab-pane fade" id="themes" role="tabpanel">
-  <div id="accordionThemes" style="max-width:800px; margin:auto;">
+        <div class="container-fluid">
+          <div class="row">
 
-    <!-- Core Aesthetics -->
-    <div class="card my-3 p-3" style="border-radius:2rem; background-color: rgba(0,0,0,0.5); border:2px solid #800000;">
-      <a class="btn btn-block text-center" data-toggle="collapse" data-target="#coreGroup" style="color:#fd9797; font-size:25px;">
-        <i class="fa-solid fa-layer-group" style="color:#fd9797;"></i> <span style="color:#e53935;">Core Aesthetics</span> <i class="fa-solid fa-layer-group" style="color:#fd9797;"></i>
-      </a>
-    </div>
-    <div class="collapse" id="coreGroup" data-parent="#accordionThemes">
-      <div class="card p-3" style="border-radius:1rem; background-color: rgba(0,0,0,0.4); border:1px solid #800000;">
-        <div style="column-count: 2; column-gap: 2rem;">
-          <p>🩸 Weirdcore</p>
-          <p>🩸 Traumacore</p>
-          <p>🩸 Dreamcore</p>
-          <p>🩸 Glitchcore</p>
-          <p>🩸 Gloomcore</p>
-          <p>🩸 Gorecore</p>
-          <p>🩸 Kidcore</p>
-          <p>🩸 Cryptidcore</p>
-          <p>🩸 Magical Girlcore</p>
-          <p>🩸 Meatcore</p>
-          <p>🩸 Medicalcore</p>
-          <p>🩸 Poolcore / Poolscore</p>
-          <p>🩸 Wizardcore</p>
+            <!-- Core Aesthetics -->
+            <div class="col-auto mb-3 theme-card">
+              <div class="card h-100">
+                <button class="btn btn-block text-center text-nowrap" 
+                        data-toggle="collapse" data-target="#coreGroup">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span class="mx-1 text-danger">Core Aesthetics</span>
+                  <i class="fa-solid fa-layer-group"></i>
+                </button>
+                <div class="collapse" id="coreGroup">
+                  <div class="card-body">
+                    <p>🩸 Weirdcore</p>
+                    <p>🩸 Traumacore</p>
+                    <p>🩸 Dreamcore</p>
+                    <p>🩸 Glitchcore</p>
+                    <p>🩸 Gloomcore</p>
+                    <p>🩸 Gorecore</p>
+                    <p>🩸 Kidcore</p>
+                    <p>🩸 Cryptidcore</p>
+                    <p>🩸 Magical Girlcore</p>
+                    <p>🩸 Meatcore</p>
+                    <p>🩸 Medicalcore</p>
+                    <p>🩸 Poolcore / Poolscore</p>
+                    <p>🩸 Wizardcore</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Horror Themes -->
+            <div class="col-auto mb-3 theme-card">
+              <div class="card h-100">
+                <button class="btn btn-block text-center text-nowrap"
+                        data-toggle="collapse" data-target="#horrorGroup">
+                  <i class="fa-solid fa-mask"></i>
+                  <span class="mx-1 text-danger">Horror Themes</span>
+                  <i class="fa-solid fa-mask"></i>
+                </button>
+                <div class="collapse" id="horrorGroup">
+                  <div class="card-body">
+                    <p>🩸 Gore</p>
+                    <p>🩸 Horror</p>
+                    <p>🩸 Digital Horror</p>
+                    <p>🩸 Analog Horror</p>
+                    <p>🩸 Religious Horror</p>
+                    <p>🩸 Catholic Imagery</p>
+                    <p>🩸 Zombies / Apocalypse</p>
+                    <p>🩸 Backrooms</p>
+                    <p>🩸 Uncanny Valley</p>
+                    <p>🩸 Western (with horror twist)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fashion & Style -->
+            <div class="col-auto mb-3 theme-card">
+              <div class="card h-100">
+                <button class="btn btn-block text-center text-nowrap"
+                        data-toggle="collapse" data-target="#fashionGroup">
+                  <i class="fa-solid fa-shirt"></i>
+                  <span class="mx-1 text-danger">Fashion & Style</span>
+                  <i class="fa-solid fa-shirt"></i>
+                </button>
+                <div class="collapse" id="fashionGroup">
+                  <div class="card-body">
+                    <p>🩸 Gyaru (any kind!)</p>
+                    <p>🩸 Harajuku Fashion</p>
+                    <p>🩸 Visual Kei</p>
+                    <p>🩸 Kei: Jirai, Decora</p>
+                    <p>🩸 Military Lolita</p>
+                    <p>🩸 Holosexual</p>
+                    <p>🩸 Heisei Retro</p>
+                    <p>🩸 Hallyu</p>
+                    <p>🩸 Yami Kawaii</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech & Retro -->
+            <div class="col-auto mb-3 theme-card">
+              <div class="card h-100">
+                <button class="btn btn-block text-center text-nowrap"
+                        data-toggle="collapse" data-target="#techGroup">
+                  <i class="fa-solid fa-computer"></i>
+                  <span class="mx-1 text-danger">Tech & Retro</span>
+                  <i class="fa-solid fa-computer"></i>
+                </button>
+                <div class="collapse" id="techGroup">
+                  <div class="card-body">
+                    <p>🩸 Frutiger Aero</p>
+                    <p>🩸 Chromecore / Y2K Chromecore</p>
+                    <p>🩸 Y2K Futurism</p>
+                    <p>🩸 Y2K</p>
+                    <p>🩸 Webcore</p>
+                    <p>🩸 Cassette Futurism</p>
+                    <p>🩸 Hacker</p>
+                    <p>🩸 Glam Rock / Hair Metal</p>
+                    <p>🩸 Seapunk</p>
+                    <p>🩸 Mallsoft</p>
+                    <p>🩸 Junkpunk</p>
+                    <p>🩸 Cyberpunk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Uncanny and Unsettling -->
+            <div class="col-auto mb-3 theme-card">
+              <div class="card h-100">
+                <button class="btn btn-block text-center text-nowrap"
+                        data-toggle="collapse" data-target="#artGroup">
+                  <i class="fa-solid fa-palette"></i>
+                  <span class="mx-1 text-danger">Uncanny & Unsettling</span>
+                  <i class="fa-solid fa-palette"></i>
+                </button>
+                <div class="collapse" id="artGroup">
+                  <div class="card-body">
+                    <p>🩸 Surrealism</p>
+                    <p>🩸 Ukiyo-e</p>
+                    <p>🩸 Hauntology</p>
+                    <p>🩸 Mizuiro</p>
+                    <p>🩸 Whimsigoth</p>
+                    <p>🩸 Vulture Culture</p>
+                    <p>🩸 Suburban Gothic</p>
+                    <p>🩸 Midwest Gothic</p>
+                    <p>🩸 Southern Gothic</p>
+                    <p>🩸 Religious Imagery</p>
+                    <p>🩸 Catholic / Religious Horror</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Creatures & Myth -->
+            <div class="col-auto mb-3 theme-card">
+              <div class="card h-100">
+                <button class="btn btn-block text-center text-nowrap"
+                        data-toggle="collapse" data-target="#mythGroup">
+                  <i class="fa-solid fa-dragon"></i>
+                  <span class="mx-1 text-danger">Creatures & Myth</span>
+                  <i class="fa-solid fa-dragon"></i>
+                </button>
+                <div class="collapse" id="mythGroup">
+                  <div class="card-body">
+                    <p>🩸 Vampires</p>
+                    <p>🩸 Werewolves</p>
+                    <p>🩸 Cryptids</p>
+                    <p>🩸 Zombies</p>
+                    <p>🩸 Backrooms Entity</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Magical & Kawaii Horror -->
+            <div class="col-auto mb-3 theme-card">
+              <div class="card h-100">
+                <button class="btn btn-block text-center text-nowrap"
+                        data-toggle="collapse" data-target="#magicalGroup">
+                  <i class="fa-solid fa-wand-sparkles"></i>
+                  <span class="mx-1 text-danger">Girl Stuff</span>
+                  <i class="fa-solid fa-wand-sparkles"></i>
+                </button>
+                <div class="collapse" id="magicalGroup">
+                  <div class="card-body">
+                    <p>🩸 Mahou Shoujo / Magical Girls</p>
+                    <p>🩸 Mix of Kawaii & Horror</p>
+                    <p>🩸 Madoka Magica</p>
+                    <p>🩸 Mahou Shoujo Site</p>
+                    <p>🩸 Yandere</p>
+                    <p>🩸 Femcel Weeaboo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Horror Themes -->
-    <div class="card my-3 p-3" style="border-radius:2rem; background-color: rgba(0,0,0,0.5); border:2px solid #800000;">
-      <a class="btn btn-block text-center" data-toggle="collapse" data-target="#horrorGroup" style="color:#fd9797; font-size:25px;">
-        <i class="fa-solid fa-mask" style="color:#fd9797;"></i> <span style="color:#e53935;">Horror Themes</span> <i class="fa-solid fa-mask" style="color:#fd9797;"></i>
-      </a>
-    </div>
-    <div class="collapse" id="horrorGroup" data-parent="#accordionThemes">
-      <div class="card p-3" style="border-radius:1rem; background-color: rgba(0,0,0,0.4); border:1px solid #800000;">
-        <div style="column-count: 2; column-gap: 2rem;">
-          <p>🩸 Gore</p>
-          <p>🩸 Horror</p>
-          <p>🩸 Digital Horror</p>
-          <p>🩸 Analog Horror</p>
-          <p>🩸 Religious Horror</p>
-          <p>🩸 Catholic Imagery</p>
-          <p>🩸 Zombies / Apocalypse</p>
-          <p>🩸 Backrooms</p>
-          <p>🩸 Uncanny Valley</p>
-          <p>🩸 Western (with horror twist)</p>
+      <!-- Species Preferences -->
+      <div class="tab-pane fade" id="species" role="tabpanel">
+        <p>🩸 Furries (Faves: Rabbits / Bunnies / Jackalopes)</p>
+        <p>🩸 Humans</p>
+        <p>🩸 Monsters / Cryptids</p>
+        <p>🩸 Humanoids (Faves: Mermaids / Sirens / Selkies / Etc, Vampires, Werewolves)</p>
+        <p>🩸 Ferals aren't usually my taste!</p>
+      </div>
+
+      <!-- Character Tropes -->
+      <div class="tab-pane fade" id="tropes" role="tabpanel">
+        <div style="column-count:2; column-gap:2rem">
+          <p>🩸 Old men</p>
+          <p>🩸 Pathetic men</p>
+          <p>🩸 Failwife of a man</p>
+          <p>🩸 Serial Killers</p>
+          <p>🩸 Cannibals</p>
+          <p>🩸 Stupid nerds</p>
+          <p>🩸 Awkward men</p>
+          <p>🩸 Yanderes</p>
+          <p>🩸 Priests (usually "corrupted" priests)</p>
+          <p>🩸 Glasses (I love retro glasses)</p>
+          <p>🩸 Unkempt hair / beard / mustache</p>
+          <p>🩸 Middle aged bastard</p>
+          <p>🩸 Backrooms entity</p>
+          <p>🩸 Emotionless husk</p>
+          <p>🩸 Tired men with deep eyebags</p>
+          <p>🩸 Way Too Fucking Tall</p>
+          <p>🩸 Evil / Mad Scientist</p>
+          <p>🩸 Cowboys</p>
+          <p>🩸 Vampire killers</p>
         </div>
       </div>
-    </div>
-
-    <!-- Fashion & Style -->
-    <div class="card my-3 p-3" style="border-radius:2rem; background-color: rgba(0,0,0,0.5); border:2px solid #800000;">
-      <a class="btn btn-block text-center" data-toggle="collapse" data-target="#fashionGroup" style="color:#fd9797; font-size:25px;">
-        <i class="fa-solid fa-shirt" style="color:#fd9797;"></i> <span style="color:#e53935;">Fashion & Style</span> <i class="fa-solid fa-shirt" style="color:#fd9797;"></i>
-      </a>
-    </div>
-    <div class="collapse" id="fashionGroup" data-parent="#accordionThemes">
-      <div class="card p-3" style="border-radius:1rem; background-color: rgba(0,0,0,0.4); border:1px solid #800000;">
-        <div style="column-count: 2; column-gap: 2rem;">
-          <p>🩸 Gyaru (any kind!)</p>
-          <p>🩸 Harajuku Fashion</p>
-          <p>🩸 Visual Kei</p>
-          <p>🩸 Kei: Jirai, Decora</p>
-          <p>🩸 Military Lolita</p>
-          <p>🩸 Holosexual</p>
-          <p>🩸 Heisei Retro</p>
-          <p>🩸 Hallyu</p>
-          <p>🩸 Yami Kawaii</p>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Tech & Retro -->
-    <div class="card my-3 p-3" style="border-radius:2rem; background-color: rgba(0,0,0,0.5); border:2px solid #800000;">
-      <a class="btn btn-block text-center" data-toggle="collapse" data-target="#techGroup" style="color:#fd9797; font-size:25px;">
-        <i class="fa-solid fa-computer" style="color:#fd9797;"></i> <span style="color:#e53935;">Tech & Retro</span> <i class="fa-solid fa-computer" style="color:#fd9797;"></i>
-      </a>
-    </div>
-    <div class="collapse" id="techGroup" data-parent="#accordionThemes">
-      <div class="card p-3" style="border-radius:1rem; background-color: rgba(0,0,0,0.4); border:1px solid #800000;">
-        <div style="column-count: 2; column-gap: 2rem;">
-          <p>🩸 Frutiger Aero</p>
-          <p>🩸 Chromecore / Y2K Chromecore</p>
-          <p>🩸 Y2K Futurism</p>
-          <p>🩸 Y2K</p>
-          <p>🩸 Webcore</p>
-          <p>🩸 Cassette Futurism</p>
-          <p>🩸 Hacker</p>
-          <p>🩸 Glam Rock / Hair Metal</p>
-          <p>🩸 Seapunk</p>
-          <p>🩸 Mallsoft</p>
-          <p>🩸 Junkpunk</p>
-          <p>🩸 Cyberpunk</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Abstract & Art Movements -->
-<div class="card my-3 p-3" style="border-radius:2rem; background-color: rgba(0,0,0,0.5); border:2px solid #800000;">
-  <a class="btn btn-block text-center" data-toggle="collapse" data-target="#artGroup" style="color:#fd9797; font-size:25px;">
-    <i class="fa-solid fa-palette" style="color:#fd9797;"></i> <span style="color:#e53935;">Uncanny and Unsettling</span> <i class="fa-solid fa-palette" style="color:#fd9797;"></i>
-  </a>
-</div>
-<div class="collapse" id="artGroup" data-parent="#accordionThemes">
-  <div class="card p-3" style="border-radius:1rem; background-color: rgba(0,0,0,0.4); border:1px solid #800000;">
-    <div style="column-count: 2; column-gap: 2rem;">
-      <p>🩸 Surrealism</p>
-      <p>🩸 Ukiyo-e</p>
-      <p>🩸 Hauntology</p>
-      <p>🩸 Mizuiro</p>
-      <p>🩸 Whimsigoth</p>
-      <p>🩸 Vulture Culture</p>
-      <p>🩸 Suburban Gothic</p>
-      <p>🩸 Midwest Gothic</p>
-      <p>🩸 Southern Gothic</p>
-      <p>🩸 Religious Imagery</p>
-      <p>🩸 Catholic / Religious Horror</p>
-    
     </div>
   </div>
-</div>
-
-
-    <!-- Creatures & Myth -->
-    <div class="card my-3 p-3" style="border-radius:2rem; background-color: rgba(0,0,0,0.5); border:2px solid #800000;">
-      <a class="btn btn-block text-center" data-toggle="collapse" data-target="#mythGroup" style="color:#fd9797; font-size:25px;">
-        <i class="fa-solid fa-dragon" style="color:#fd9797;"></i> <span style="color:#e53935;">Creatures & Myth</span> <i class="fa-solid fa-dragon" style="color:#fd9797;"></i>
-      </a>
-    </div>
-    <div class="collapse" id="mythGroup" data-parent="#accordionThemes">
-      <div class="card p-3" style="border-radius:1rem; background-color: rgba(0,0,0,0.4); border:1px solid #800000;">
-        <div style="column-count: 2; column-gap: 2rem;">
-          <p>🩸 Vampires</p>
-          <p>🩸 Werewolves</p>
-          <p>🩸 Cryptids</p>
-          <p>🩸 Zombies</p>
-          <p>🩸 Backrooms Entity</p>
-        </div>
-      </div>
-    </div>
-<!-- Girl Stuff -->
-<div class="card my-3 p-3" style="border-radius:2rem; background-color: rgba(0,0,0,0.5); border:2px solid #800000;">
-  <a class="btn btn-block text-center" data-toggle="collapse" data-target="#magicalGroup" style="color:#fd9797; font-size:25px;">
-    <i class="fa-solid fa-wand-sparkles" style="color:#fd9797;"></i> <span style="color:#e53935;">Magical & Kawaii Horror</span> <i class="fa-solid fa-wand-sparkles" style="color:#fd9797;"></i>
-  </a>
-</div>
-<div class="collapse" id="magicalGroup" data-parent="#accordionThemes">
-  <div class="card p-3" style="border-radius:1rem; background-color: rgba(0,0,0,0.4); border:1px solid #800000;">
-    <div style="column-count: 2; column-gap: 2rem;">
-      <p>🩸 Mahou Shoujo / Magical Girls</p>
-      <p>🩸 Mix of Kawaii & Horror</p>
-      <p>🩸 Madoka Magica</p>
-      <p>🩸 Mahou Shoujo Site</p>
-      <p>🩸 Yandere</p>
-      <p>🩸 Femcel Weeaboo</p>
-    </div>
-  </div>
-</div>
- 
-    <!-- Species Preferences -->
-    <div class="tab-pane fade" id="species" role="tabpanel">
-      <p>🩸 Furries (Faves: Rabbits / Bunnies / Jackalopes)</p>
-      <p>🩸 Humans</p>
-      <p>🩸 Monsters / Cryptids</p>
-      <p>🩸 Humanoids (Faves: Mermaids / Sirens / Selkies / Etc, Vampires, Werewolves)</p>
-      <p>🩸 Ferals aren't usually my taste!</p>
-    </div>
-
-    <!-- Character Tropes -->
-    <div class="tab-pane fade" id="tropes" role="tabpanel">
-      <div style="column-count: 2; column-gap: 2rem;">
-        <p>🩸 Old men</p>
-        <p>🩸 Pathetic men</p>
-        <p>🩸 Failwife of a man</p>
-        <p>🩸 Serial Killers</p>
-        <p>🩸 Cannibals</p>
-        <p>🩸 Stupid nerds</p>
-        <p>🩸 Awkward men</p>
-        <p>🩸 Yanderes</p>
-        <p>🩸 Priests (usually "corrupted" priests)</p>
-        <p>🩸 Glasses (I love retro glasses)</p>
-        <p>🩸 Unkempt hair / beard / mustache</p>
-        <p>🩸 Middle aged bastard</p>
-        <p>🩸 Backrooms entity</p>
-        <p>🩸 Emotionless husk</p>
-        <p>🩸 Tired men with deep eyebags</p>
-        <p>🩸 Way Too Fucking Tall</p>
-        <p>🩸 Evil / Mad Scientist</p>
-        <p>🩸 Cowboys</p>
-        <p>🩸 Vampire killers</p>
-      </div>
-    </div>
-  </div>
- </div>
 
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -348,7 +348,7 @@ p {
 .artist-item {
   display: grid;
   grid-template-rows: auto 1fr;
-  background: #fafafa;
+  background: #000000; 
   padding: 0.75rem;
   border-radius: 0.25rem;
 }

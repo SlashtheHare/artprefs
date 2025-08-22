@@ -346,7 +346,25 @@
         id="species"
         role="tabpanel"
         aria-labelledby="species-tab">
-        <p>🩸 Furries (Rabbits, Bunnies, Jackalopes)</p>
+       <div class="d-flex flex-row flex-nowrap overflow-auto px-3">
+  <!-- Example Card -->
+  <div class="theme-card card h-100">
+    <button class="btn btn-block"
+            data-bs-toggle="collapse"
+            data-bs-target="#furryGroup"
+            aria-expanded="false"
+            aria-controls="furryGroup">
+      🐰 Furries
+    </button>
+    <div class="collapse" id="furryGroup">
+      <div class="card-body">
+        <p>🩸 Rabbits</p>
+        <p>🩸 Bunnies</p>
+        <p>🩸 Jackalopes</p>
+      </div>
+    </div>
+  </div>
+
         <p>🩸 Humans</p>
         <p>🩸 Monsters & Cryptids</p>
         <p>🩸 Humanoids (Mermaids, Sirens, Vampires, Werewolves)</p>

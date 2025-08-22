@@ -414,3 +414,10 @@ body {
   color: #fff;
 }
 
+
+/* Limit the width of the main content */
+body > .container {
+  max-width: 1400px; /* You can adjust this value */
+  margin: 0 auto;
+  padding: 1rem;
+}

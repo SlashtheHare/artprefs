@@ -399,7 +399,7 @@ body {
   background-position: center;
   backdrop-filter: blur(2px);
   border-radius: 0.75rem;
-  color: #fff; /* optional: make text readable */
+  color: rgb(199,47,62) !important; /* optional: make text readable */ 
 }
 
 /* Optional: soften tab backgrounds */

@@ -1,2 +1,2 @@
-# teddysdesigntastes
-https://giobrauer.github.io/teddysdesigntastes/
+# teddysartprefs
+https://giobrauer.github.io/teddysartprefs/

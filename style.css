@@ -366,3 +366,51 @@ p {
   max-height: 550px;
   overflow: hidden;
 }
+
+/* ─────────────────────────────────────────────
+   1. Full-page background GIF
+───────────────────────────────────────────── */
+body {
+  background-image: url('https://64.media.tumblr.com/e76d21792678771fe7bb4e61e98c4e41/0f1c2dc5dc5ea9ec-77/s540x810/7ef142151c5ebbb55d43bca8dd79e4471e694fa1.gifv');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* ─────────────────────────────────────────────
+   2. Header background GIF
+───────────────────────────────────────────── */
+.custom-header {
+  background-image: url('https://i.imgur.com/CAxdJUw.gif');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+/* ─────────────────────────────────────────────
+   3. Tabs + content area background GIF
+───────────────────────────────────────────── */
+.card.my-4.p-4 {
+  background-image: url('https://64.media.tumblr.com/7cfa64e3178a896fb9d99582a169ee74/0f1c2dc5dc5ea9ec-83/s540x810/5f731dd95d43280da19bbe8122b6a659975932e6.gifv');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(2px);
+  border-radius: 0.75rem;
+  color: #fff; /* optional: make text readable */
+}
+
+/* Optional: soften tab backgrounds */
+.nav-tabs .nav-link {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fd9797;
+  border: none;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+

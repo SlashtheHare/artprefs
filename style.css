@@ -237,6 +237,8 @@ p {
   border-color: var(--theme-pink) var(--theme-pink) transparent !important;
 }
 
+
+
 /* all paragraphs & list items inside tabs */
 .tab-content p,
 .tab-content li {
@@ -293,7 +295,7 @@ p {
 }
 
 #yesGroup .card-body {
-  column-count: 4;
+  column-count: 2;
   column-gap: 1rem;
 }
 
@@ -323,8 +325,8 @@ p {
 
 /* Widen the “yes” card */
 #content .theme-card.yes-card {
-  flex: 0 0 800px;
-  width: 1800px;
+  flex: 0 0 400px;
+  width: 1400px;
 }
 
 /* Shrink “maybe” & “nope” */
@@ -421,3 +423,4 @@ body > .container {
   margin: 0 auto;
   padding: 1rem;
 }
+

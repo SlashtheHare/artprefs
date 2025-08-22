@@ -410,6 +410,11 @@ p {
   overflow: hidden;
 }
 
+#species .theme-card .card-body {
+  max-height: 300px; /* or whatever fits your layout */
+  overflow-y: auto;
+}
+
 /* ─────────────────────────────────────────────
    1. Full-page background GIF
 ───────────────────────────────────────────── */

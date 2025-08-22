@@ -333,3 +333,36 @@ p {
   flex: 0 0 400px;
   max-width: 500px;
 }
+
+
+
+/* 1. Grid wrapper: auto-flow columns, responsive min/max width */
+.fave-artists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* 2. Each artist cell: two rows (name + carousel) */
+.artist-item {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: #fafafa;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+/* 3. Style the name row */
+.artist-name {
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+/* 4. Make carousel fill remaining space */
+.artist-carousel {
+  width: 100%;
+  /* optional: fixed height or let images define it */
+  max-height: 550px;
+  overflow: hidden;
+}

@@ -5,6 +5,12 @@ body {
   background: url('https://gifcity.carrd.co/assets/images/gallery63/4290ff0d.jpg?v=0afd6af1') repeat;
   padding: 32px;
   border-radius: 20px;
+  font-family: 'Constantia';
+}
+
+h1, h2, h3, h4, h5, h6, p, li, button {
+  font-family: 'Constantia';
+  font-size: 120%;
 }
 
 .card {
@@ -52,6 +58,11 @@ p {
   color: #fd9797;
   font-size: 1.2rem;
   font-weight: bold;
+   padding: 0.75rem 1.25rem;
+  font-size: 1.25rem;
+ 
+  text-shadow: 1px 1px 2px #000; /* subtle glow for legibility */
+  
 }
 
 .nav-tabs .nav-link.active {
@@ -76,6 +87,7 @@ p {
 .theme-card {
   max-width: 280px;      /* each card caps at 280px */
   margin: 0.5rem;        /* gutter between cards */
+  flex: 0 0 auto;
 }
 
 .theme-card .btn {
@@ -116,9 +128,10 @@ p {
    2) Cap the Tabs card height & make content scroll
    -------------------------------------------------- */
 .card.my-4.p-4 {
-  display: flex;
+ display: flex;
   flex-direction: column;
-  height: 680px;     /* ← adjust to your desired total height */
+  height: 660px;
+  overflow: hidden;
 }
 
 .card.my-4.p-4 .nav-tabs {
@@ -126,11 +139,14 @@ p {
 }
 
 .card.my-4.p-4 .tab-content {
-  flex: 1 1 auto;    /* fill remaining space */
-  min-height: 0;     /* allow flexbox to shrink */
-  overflow-y: auto;  /* scroll if content is too tall */
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
+.theme-card .collapse .card-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
 /* --------------------------------------------------
    3) Style “Fave Artists” and any other list in tabs
    -------------------------------------------------- */
@@ -231,6 +247,17 @@ p {
   color: var(--theme-pink) !important;
 }
 
+.nav-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
 /* active tab underline/border */
 .nav-tabs .nav-link.active {
   color: var(--theme-pink) !important;
@@ -281,10 +308,24 @@ p {
   color: rgb(199,47,62) !important;
 }
 
+.d-flex.flex-row.flex-nowrap {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.theme-card {
+  scroll-snap-align: start;
+}
+
 /* 2) Change the font size of everything inside the card-body */
 #content .theme-card .card-body {
   font-size: 20px;    /* ← adjust this for all paragraphs & list items */
   line-height: 1.4;     /* optional: tweak line-height for readability */
+}
+
+.theme-card .card-body {
+  max-height: 500px; /* or whatever fits your layout */
+  overflow-y: auto;
 }
 
 /* 3) If you have <p> or <ul>/<li> in there and want to be extra sure: */
@@ -387,9 +428,31 @@ body {
   background-image: url('https://i.imgur.com/CAxdJUw.gif');
   background-size: cover;
   background-position: center;
-  padding: 2rem;
-  border-radius: 0.5rem;
+  background-repeat: no-repeat;
+  height: 200px; /* or more for drama */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
+
+.display-3 {
+   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+.custom-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.229);
+  z-index: 0; 
+}
+
+.custom-header h1 {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* ─────────────────────────────────────────────
    3. Tabs + content area background GIF
@@ -416,6 +479,11 @@ body {
   color: #fff;
 }
 
+.tab-pane {
+ height: 100%;
+  overflow-y: hidden;
+}
+
 
 /* Limit the width of the main content */
 body > .container {
@@ -423,4 +491,3 @@ body > .container {
   margin: 0 auto;
   padding: 1rem;
 }
-

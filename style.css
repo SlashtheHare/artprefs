@@ -615,5 +615,5 @@ body > .container {
 }
 
 .social-nav a:hover {
-  color: #ff69b4; /* or any accent color you like */
+  color: rgb(199,47,62); /* or any accent color you like */
 }

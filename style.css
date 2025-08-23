@@ -130,7 +130,7 @@ p {
 .card.my-4.p-4 {
  display: flex;
   flex-direction: column;
-  height: 580px;
+  height: 600px;
   overflow: hidden;
 }
 
@@ -250,8 +250,11 @@ p {
 .nav-tabs {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+ 
   -webkit-overflow-scrolling: touch;
+  overflow-x: auto;    /* keep horizontal swipe if you have many tabs */
+  overflow-y: hidden !important;  /* kill the vertical bar */
+  white-space: nowrap;/* keep tabs on one line */
 }
 
 .nav-tabs::-webkit-scrollbar {
@@ -264,7 +267,7 @@ p {
   border-color: var(--theme-pink) var(--theme-pink) transparent !important;
 }
 
-
+.nav-tabs { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* all paragraphs & list items inside tabs */
 .tab-content p,
@@ -385,6 +388,20 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   align-items: start;
+    margin-top: 0 !important;
+}
+
+/* Make sure you’re using your real tab-content ID here */
+#infoTabsContent > #fave-artists {
+  /* remove any leftover Bootstrap spacing */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* In case there’s still a hiccup, shift it up by the card’s top padding (1.5rem) */
+#infoTabsContent > #fave-artists {
+  position: relative;
+  top: -11.5rem;        /* tweak this value until it’s flush */
 }
 
 /* 2. Each artist cell: two rows (name + carousel) */
@@ -490,6 +507,7 @@ body {
   backdrop-filter: blur(2px);
   border-radius: 0.75rem;
   color: rgb(199,47,62) !important; /* optional: make text readable */ 
+  
 }
 
 /* Optional: soften tab backgrounds */
@@ -541,3 +559,14 @@ body > .container {
   color: #fd9797;
 }
 
+#fave-artists {
+  margin-top:   0 !important;
+  padding-top:  0 !important;
+}
+
+/* 1) Target just the Fave Artists tab-pane */
+.tab-content > #fave-artists {
+  /* remove any internal spacing */
+  margin-top: -1.5rem !important;  /* pulls up by the card’s p-4 top padding */
+  padding-top:  0     !important;
+}

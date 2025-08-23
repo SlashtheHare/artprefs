@@ -1,47 +1,73 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
-  // 1) Build a Collapse instance map by panel ID
+  // ——— 1) Collapse Panels ———
   const collapseEls = document.querySelectorAll('.theme-card .collapse');
   const instances   = {};
-  
   collapseEls.forEach(el => {
-    // el.id must match data-bs-target="#<id>"
     instances[el.id] = new bootstrap.Collapse(el, { toggle: false });
   });
 
-  // 2) Wire up each button
   document.querySelectorAll('.theme-card .btn').forEach(btn => {
-    // remove leading '#' from data-bs-target
     const targetID = btn.dataset.bsTarget.substring(1);
-    const coll     = instances[targetID];
+    const inst     = instances[targetID];
     const panel    = document.getElementById(targetID);
 
     btn.addEventListener('click', () => {
       const isOpen = panel.classList.contains('show');
-
-      // 3) Close everything, deactivate all buttons
-      Object.values(instances).forEach(inst => inst.hide());
+      // close all
+      Object.values(instances).forEach(i => i.hide());
       document.querySelectorAll('.theme-card .btn.active')
               .forEach(b => b.classList.remove('active'));
-
-      // 4) If it wasn’t open, open it & activate the button
+      // toggle this one
       if (!isOpen) {
-        coll.show();
+        inst.show();
         btn.classList.add('active');
       }
     });
   });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-  const zoomables = document.querySelectorAll('.zoomable');
-  const zoomedImage = document.getElementById('zoomedImage');
+  // ——— 2) Zoom-Into-Carousel Modal ———
+  const zoomModalEl       = document.getElementById('zoomModal');
+  const zoomCarouselEl    = document.getElementById('zoomCarousel');
+  const zoomCarouselInner = document.getElementById('zoomCarouselInner');
+  let   zoomCarouselInst;   // will hold our Carousel instance
 
-  zoomables.forEach(img => {
-    img.addEventListener('click', () => {
-      zoomedImage.src = img.src;
-      const zoomModal = new bootstrap.Modal(document.getElementById('zoomModal'));
-      zoomModal.show();
+  function initZoomCarousel() {
+    if (zoomCarouselInst) zoomCarouselInst.dispose();
+    zoomCarouselInst = new bootstrap.Carousel(zoomCarouselEl, {
+      interval: false,
+      wrap:     true,
+      ride:     false
     });
+    zoomCarouselInst.pause();
+  }
+
+  document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+      zoomCarouselInner.innerHTML = '';
+
+      const slides = img.closest('.carousel-inner')
+                        .querySelectorAll('img.zoomable');
+
+      slides.forEach(el => {
+        const item = document.createElement('div');
+        item.className = 'carousel-item' + (el === img ? ' active' : '');
+
+        const clone = el.cloneNode();
+        clone.classList.add('d-block', 'w-100');
+        item.appendChild(clone);
+
+        zoomCarouselInner.appendChild(item);
+      });
+
+      initZoomCarousel();
+      new bootstrap.Modal(zoomModalEl).show();
+    });
+  });
+
+  // ——— 3) Keyboard Navigation ———
+  zoomModalEl.addEventListener('keydown', e => {
+    if (!zoomCarouselInst) return;
+    if (e.key === 'ArrowRight') zoomCarouselInst.next();
+    if (e.key === 'ArrowLeft')  zoomCarouselInst.prev();
   });
 });

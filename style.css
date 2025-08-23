@@ -285,6 +285,7 @@ p {
   min-width: 240px;        /* adjust to taste */
   max-width: 500px;        /* keeps them roughly equal */
   margin: 0.5rem;          /* spacing between cards */
+  
 }
 
 /* 2) Smaller “tab” button text inside those cards */
@@ -313,11 +314,13 @@ p {
   padding: 0.5rem;      /* you can tweak padding here too */
   color: rgb(199,47,62) !important;
 }
-
 .d-flex.flex-row.flex-nowrap {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
+
+
+
 
 .theme-card {
   scroll-snap-align: start;
@@ -327,11 +330,13 @@ p {
 #content .theme-card .card-body {
   font-size: 20px;    /* ← adjust this for all paragraphs & list items */
   line-height: 1.4;     /* optional: tweak line-height for readability */
+  
 }
 
 .theme-card .card-body {
   max-height: 500px; /* or whatever fits your layout */
   overflow-y: auto;
+  
 }
 
 /* 3) If you have <p> or <ul>/<li> in there and want to be extra sure: */
@@ -339,6 +344,7 @@ p {
 #content .theme-card .card-body ul,
 #content .theme-card .card-body li {
   font-size: 0.9rem;    /* same as above; use !important if another rule is winning */
+  
 }
 
 #yesGroup .card-body {
@@ -368,12 +374,21 @@ p {
   flex: 0 0 auto;
   min-width: auto;
   max-width: none;
+  
 }
+
+#content .d-flex.flex-row.flex-nowrap {
+  justify-content: center;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
 
 /* Widen the “yes” card */
 #content .theme-card.yes-card {
   flex: 0 0 400px;
   width: 1400px;
+  
 }
 
 /* Shrink “maybe” & “nope” */
@@ -381,6 +396,7 @@ p {
 #content .theme-card.nope-card {
   flex: 0 0 400px;
   max-width: 500px;
+  
 }
 
 

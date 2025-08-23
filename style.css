@@ -391,6 +391,23 @@ p {
     margin-top: 0 !important;
 }
 
+.fave-artists-grid .artist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.fave-artists-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
 /* Make sure you’re using your real tab-content ID here */
 #infoTabsContent > #fave-artists {
   /* remove any leftover Bootstrap spacing */
@@ -398,11 +415,7 @@ p {
   padding-top: 0 !important;
 }
 
-/* In case there’s still a hiccup, shift it up by the card’s top padding (1.5rem) */
-#infoTabsContent > #fave-artists {
-  position: relative;
-  top: -11.5rem;        /* tweak this value until it’s flush */
-}
+
 
 /* 2. Each artist cell: two rows (name + carousel) */
 .artist-item {
@@ -474,7 +487,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 0;
+   margin-top: 0;
   padding-top: 0;
 }
 
@@ -569,4 +582,32 @@ body > .container {
   /* remove any internal spacing */
   margin-top: -1.5rem !important;  /* pulls up by the card’s p-4 top padding */
   padding-top:  0     !important;
+}
+
+.social-nav {
+  background-color: #111; /* or match your header */
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.social-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-nav a:hover {
+  color: #ff69b4; /* or any accent color you like */
 }

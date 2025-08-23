@@ -32,3 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const zoomables = document.querySelectorAll('.zoomable');
+  const zoomedImage = document.getElementById('zoomedImage');
+
+  zoomables.forEach(img => {
+    img.addEventListener('click', () => {
+      zoomedImage.src = img.src;
+      const zoomModal = new bootstrap.Modal(document.getElementById('zoomModal'));
+      zoomModal.show();
+    });
+  });
+});

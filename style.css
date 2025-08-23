@@ -516,7 +516,7 @@ body {
 /* ─────────────────────────────────────────────
    3. Tabs + content area background GIF
 ───────────────────────────────────────────── */
-.card.my-4.p-4 {
+.card.my-6.p-3 {
   background-image: url('https://64.media.tumblr.com/7cfa64e3178a896fb9d99582a169ee74/0f1c2dc5dc5ea9ec-83/s540x810/5f731dd95d43280da19bbe8122b6a659975932e6.gifv');
   background-size: cover;
   background-repeat: no-repeat;
@@ -524,6 +524,7 @@ body {
   backdrop-filter: blur(2px);
   border-radius: 0.75rem;
   color: rgb(199,47,62) !important; /* optional: make text readable */ 
+  min-height: 600px;
   
 }
 
@@ -615,5 +616,5 @@ body > .container {
 }
 
 .social-nav a:hover {
-  color: rgb(199,47,62); /* or any accent color you like */
+  color: #ff69b4; /* or any accent color you like */
 }

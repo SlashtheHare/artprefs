@@ -440,6 +440,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* ─────────────────────────────────────────────
@@ -455,6 +457,8 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .display-3 {

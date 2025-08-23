@@ -71,3 +71,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowLeft')  zoomCarouselInst.prev();
   });
 });
+
+const tabSound = document.getElementById('tabSound');
+const linkSound = document.getElementById('linkSound');
+
+// Tabs
+document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabSound.currentTime = 0;
+    tabSound.play();
+    tabSound.volume = 0.5;
+  });
+});
+
+// Social Links
+document.querySelectorAll('.social-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    linkSound.currentTime = 0;
+    linkSound.play();
+    linkSound.volume = 0.3;
+  });
+});

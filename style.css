@@ -396,6 +396,10 @@ p {
   border-radius: 0.25rem;
 }
 
+.artist-item button {
+  margin-bottom: 3.75rem;
+}
+
 /* 3. Style the name row */
 .artist-name {
   margin: 0 0 0.5rem;
@@ -411,8 +415,20 @@ p {
 }
 
 #species .theme-card .card-body {
-  max-height: 300px; /* or whatever fits your layout */
+  max-height: 450px; /* or whatever fits your layout */
+  align-items: center;
+  justify-content: center;
   overflow-y: auto;
+  font-size: 20px;
+}
+
+#species .collapse .card-body p {
+  font-size: 20px !important;
+}
+
+#species .theme-card button {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 /* ─────────────────────────────────────────────
@@ -495,4 +511,23 @@ body > .container {
   max-width: 1400px; /* You can adjust this value */
   margin: 0 auto;
   padding: 1rem;
+}
+
+#zoomedImage {
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+
+
+
+.artist-name a {
+  color: rgb(199,47,62);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.artist-name a:hover {
+  text-decoration: underline;
+  color: #fd9797;
 }

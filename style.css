@@ -60,6 +60,7 @@ p {
   font-weight: bold;
    padding: 0.75rem 1.25rem;
   font-size: 1.25rem;
+  
  
   text-shadow: 1px 1px 2px #000; /* subtle glow for legibility */
   
@@ -255,6 +256,8 @@ p {
   overflow-x: auto;    /* keep horizontal swipe if you have many tabs */
   overflow-y: hidden !important;  /* kill the vertical bar */
   white-space: nowrap;/* keep tabs on one line */
+   align-items: center;
+  justify-content: center;
 }
 
 .nav-tabs::-webkit-scrollbar {
@@ -529,16 +532,19 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fd9797;
   border: none;
+  
 }
 
 .nav-tabs .nav-link.active {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
+  
 }
 
 .tab-pane {
  height: 100%;
   overflow-y: hidden;
+  
 }
 
 

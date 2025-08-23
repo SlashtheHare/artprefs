@@ -432,7 +432,7 @@ p {
 }
 
 #species .theme-card .card-body {
-  max-height: 450px; /* or whatever fits your layout */
+  max-height: 400px; /* or whatever fits your layout */
   align-items: center;
   justify-content: center;
   overflow-y: auto;

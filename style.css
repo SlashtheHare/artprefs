@@ -546,7 +546,7 @@ body {
 body > .container {
   max-width: 1400px; /* You can adjust this value */
   margin: 0 auto;
-  padding: 1rem;
+ 
 }
 
 #zoomedImage {

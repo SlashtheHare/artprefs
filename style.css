@@ -522,6 +522,11 @@ body > .container {
   object-fit: contain;
 }
 
+.carousel-item img {
+  max-height: 90vh;
+  object-fit: contain;
+}
+
 
 
 
@@ -535,3 +540,4 @@ body > .container {
   text-decoration: underline;
   color: #fd9797;
 }
+

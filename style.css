@@ -578,7 +578,7 @@ body > .container {
 }
 
 .carousel-item img {
-  max-height: 90vh;
+  max-width: 320px;
   object-fit: contain;
 }
 
@@ -607,16 +607,17 @@ body > .container {
   padding-top:  0     !important;
 }
 
-#fave-artists .fave-artists-grid-wrapper {
+.fave-artists-scroll-container {
   overflow-x: auto;
   overflow-y: hidden;
-  white-space: nowrap;
   padding-bottom: 1rem;
-  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+  -webkit-overflow-scrolling: touch;
 }
 
 .fave-artists-grid {
-  display: inline-flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
   gap: 1rem;
 }
 

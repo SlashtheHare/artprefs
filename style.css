@@ -607,6 +607,19 @@ body > .container {
   padding-top:  0     !important;
 }
 
+#fave-artists .fave-artists-grid-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+}
+
+.fave-artists-grid {
+  display: inline-flex;
+  gap: 1rem;
+}
+
 .social-nav {
   background-color: #111; /* or match your header */
   padding: 0.5rem 1rem;

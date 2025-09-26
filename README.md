@@ -1,2 +1,2 @@
 # teddysartprefs
-https://giobrauer.github.io/teddysartprefs/
+https://slashthehare.github.io/artprefs/

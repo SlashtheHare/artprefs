@@ -679,7 +679,7 @@ body > .container {
 
 .floating-image {
   position: fixed;       /* Keeps it in place even when scrolling */
-  top: 10px;             /* Distance from the top */
+  top: -30px;               /* Distance from the top */
   right: -100px;           /* Distance from the right */
   width: 150px;          /* Adjust size as needed */
   z-index: 1000;         /* Keeps it above other elements */

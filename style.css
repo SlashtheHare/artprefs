@@ -676,3 +676,11 @@ body > .container {
 .social-nav a:hover {
   color: rgb(199,47,62); /* or any accent color you like */
 }
+
+.floating-image {
+  position: fixed;       /* Keeps it in place even when scrolling */
+  top: 20px;             /* Distance from the top */
+  right: 20px;           /* Distance from the right */
+  width: 150px;          /* Adjust size as needed */
+  z-index: 1000;         /* Keeps it above other elements */
+}
